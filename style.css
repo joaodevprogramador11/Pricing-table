@@ -1,0 +1,202 @@
+*{
+    margin: 0 ;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+}
+
+main{
+  
+    height: 100%;
+    /* position: relative; */
+    background-color: #EEEEEE;
+}
+
+main .content{
+    display: flex;
+    flex-direction:column;
+    align-items:center;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+    padding-bottom: 110px;
+    padding-top:100px;
+}
+
+main .content .container-header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 510px;
+    color: #fff;
+}
+
+main .content .container-header p{
+    text-align: center;
+}
+
+main .content::before{
+    content: "";
+    width: 100%;
+    height: 50%;
+    background-color:#1D539E;
+    top: 0;
+    position: absolute;
+    z-index: -1;
+}
+
+main .content h1 {
+    margin-bottom: 20px;
+    font-weight: 700;
+    font-size: 40px;
+    
+}
+
+main .content .container-cards{
+    display: flex;
+    gap: 20px;
+    margin-top: 65px;
+    align-items: center;
+}
+
+main .content .container-cards .card{
+    width: 355px;
+    height: 470px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 8px;
+    background-color: #ffffff;
+    padding: 30px;
+    box-shadow: 0px 1px 2px 0px rgba(142, 150, 185, 0.25);
+
+}
+
+main .content .container-cards .card.mid{
+    padding: 0px;
+    justify-content: initial;
+    height: 490px;
+    overflow: hidden;
+}
+
+main .content .container-cards .card.mid header{
+    background-color: #ffcc29;
+    display: flex;
+    justify-content: space-between;
+    padding: 22px 30px;
+    align-items: center;
+}
+
+main .content .container-cards .card.mid header .name-plan{
+    color: #1D539E;
+}
+
+main .content .container-cards .card.mid header .plan-badge{
+    font-size: 12px;
+    font-weight: 600px;
+    background-color: #1D539E;
+    padding: 8px 24px;
+    border-radius: 40px;
+    color: #fff;
+}
+
+main .content .container-cards .card.mid .content-card-mid{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    padding: 30px;
+}
+
+main .content .container-cards .card .name-plan{
+    color: #1E2338;
+    font-weight: 600;
+}
+
+main .content .container-cards .card .price{
+    color: #1E2338;
+    font-weight: 700;
+    font-size: 24px;
+}
+
+
+main .content .container-cards .card .price span{
+    color: #828799; 
+    font-weight: 400;
+    padding-left: 2px;
+}
+
+main .content .container-cards .card .title-list {
+    color: #828799; 
+    font-size: 14px;
+    padding-left: 2px;
+    margin-bottom: 40px;
+}
+
+main .content .container-cards .card .container-itens-list{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+main .content .container-cards .card .container-itens-list .item-list {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+
+}
+
+.card button{
+    border-radius: 10px;
+    border: 1px solid #1D539E;
+    padding: 12px 24px;
+    background-color: transparent;
+    color: #1d539e;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+.card button:hover{
+    background-color: #1D539E;
+    color: #fff;
+}
+
+.card.mid button{
+    background-color: #1D539E;
+    color: #ffffff;
+}
+
+.card.mid button:hover{
+    background-color: transparent;
+    color:#1D539E;
+}
+
+/* TABLET */
+
+@media screen and (max-width: 768px) {
+    main .content .container-cards {
+        flex-direction: column;
+    }
+    main .content .container-cards .card{
+        width: 500px;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    main .content .container-cards .card{
+        width: 80vw;
+    }
+    main .content .container-header{
+        width: 85vw;
+    }
+
+    main .content .container-header h1{
+        font-size: 25px;
+    }
+
+    main .content .container-header p{
+        font-size: 12px;
+
+    }
+}
